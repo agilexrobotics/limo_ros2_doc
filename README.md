@@ -1,2 +1,9 @@
-# limo_ros2_doc
-Limo ros2 user manual
+# LIMO ROS2 产品使用手册
+
+中文 | EN
+
+Version: 1.0.0
+
+| 版本  | 更新信息          | 责任人          |
+| ----- | ----------------- | --------------- |
+| 1.0.0 | [1]、第一版本开放 | Agilex ROS TEAM |
