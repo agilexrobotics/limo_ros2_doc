@@ -484,8 +484,12 @@ After launching successfully, the terminal will output the following log informa
 Then launch a new terminal and enter the command in the terminal:
 
 ```
-ros2 launch limo_bringup lidar_rviz.launch
+rviz2
 ```
+
+After launching the rviz, click 'Add' , choose 'Laserscan', and click 'ok'.
+
+![](./LIMO_image/lidar_rviz.png)
 
 After the rviz visualization software runs successfully, the green data displayed is the laser data scanned by LiDAR.
 
@@ -601,7 +605,7 @@ ros2 launch limo_bringup limo_nav2.launch.py
 **Note:** If it is Ackermann motion mode, please run:
 
 ```
-roslaunch limo_bringup limo_navigation_ackerman.launch
+ros2 launch limo_bringup limo_navigation_ackerman.launch
 ```
 
 After launching successfully, the rviz interface will be shown in the figure below:

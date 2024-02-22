@@ -1,5 +1,3 @@
-[TOC]
-
 ## 第1章 LIMO机器人简介
 
 ### 1.1 LIMO机器人
@@ -200,7 +198,6 @@
 - 请不要在电池使用殆尽以后再进行充电，当 LIMO提示电量低时，请及时充电。
 - LIMO在关机状态下仍会产生静态待机电流，为防止电池过放，长时间不使用LIMO时请断开电池与车体的连接。
 - 请勿将电池投火中，或对电池加热，请勿在高温下存储电池，电池存储的最佳温度为-25℃~45℃。
-- 请不要推动limo，防止逆向发电损坏limo主板及电池。
 - 必须使用原厂配备或认证的电池为LIMO供电。
 
 ------
@@ -477,10 +474,16 @@ ros2 launch ydlidar_ros2_driver ydlidar.launch.py
 然后新开启一个终端，在终端中输入命令：
 
 ```
-ros2 launch limo_bringup lidar_rviz.launch
+rviz2
 ```
 
-成功运行之后会看到rviz可视化工具打开，其中显示的绿色数据就是雷达扫描出来的激光数据。
+成功运行之后会看到rviz可视化工具打开。
+
+先点击Add, 再选择Laserscan，点击ok。
+
+![](./LIMO_image/lidar_rviz.png)
+
+其中显示的绿色数据就是雷达扫描出来的激光数据。
 
 ![](./LIMO_image/lidar.png)
 
@@ -599,7 +602,7 @@ ros2 launch limo_bringup limo_nav2.launch.py
 注：如果是阿克曼运动模式，请运行：
 
 ```
-roslaunch limo_bringup limo_navigation_ackerman.launch
+ros2 launch limo_bringup limo_navigation_ackerman.launch
 ```
 
 启动成功之后会打开rviz界面，如图 ：
