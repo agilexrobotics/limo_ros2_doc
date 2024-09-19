@@ -595,13 +595,13 @@ ros2 launch limo_bringup limo_start.launch.py
 （2）Launch the navigation and enter the command in the terminal:
 
 ```
-ros2 launch limo_bringup limo_nav2.launch.py
+ros2 launch limo_bringup limo_nav2_diff.launch.py
 ```
 
 **Note:** If it is Ackermann motion mode, please run:
 
 ```
-roslaunch limo_bringup limo_navigation_ackerman.launch
+roslaunch limo_bringup limo_nav2_ackermann.launch.py
 ```
 
 After launching successfully, the rviz interface will be shown in the figure below:
@@ -745,7 +745,13 @@ ros2 launch limo_bringup limo_rtab_rgbd.launch.py localization:=true
 （4）Start the navigation algorithm. Enter the command in the terminal:
 
 ```
-ros2 launch limo_bringup limo_rtab_nav2.launch.py 
+ros2 launch limo_bringup limo_rtab_nav2_diff.launch.py 
+```
+
+Note: If you are in Ackerman motion mode, run:
+
+```
+roslaunch limo_bringup limo_rtab_nav2_ackermann.launch.py
 ```
 
 ![](./LIMO_image/humble/rtab_nav2_1.png)
@@ -874,7 +880,7 @@ ros2 launch astra_camera dabai.launch.py
 Place the QR code within the field of view of Limo, and activate the traffic light recognition function.
 
 ```
-ros2 run limo_visions detect_traffic
+ros2 run limo_visions traffic_light
 ```
 
 ![](./LIMO_image/humble/rgb_v3.png)
