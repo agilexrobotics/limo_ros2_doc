@@ -484,7 +484,7 @@ After launching successfully, the terminal will output the following log informa
 Then launch a new terminal and enter the command in the terminal:
 
 ```
-ros2 launch limo_bringup lidar_rviz.launch
+rviz2
 ```
 
 After the rviz visualization software runs successfully, the green data displayed is the laser data scanned by LiDAR.
