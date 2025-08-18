@@ -596,7 +596,7 @@ ros2 launch limo_bringup limo_nav2_diff.launch.py
 注：如果是阿克曼运动模式，请运行：
 
 ```
-roslaunch limo_bringup limo_nav2_ackermann.launch.py
+ros2 launch limo_bringup limo_nav2_ackermann.launch.py
 ```
 
 启动成功之后会打开rviz界面，如图 ：
