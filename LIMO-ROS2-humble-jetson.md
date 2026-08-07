@@ -475,10 +475,10 @@ ros2 launch ydlidar_ros2_driver ydlidar.launch.py
 然后新开启一个终端，在终端中输入命令：
 
 ```
-ros2 launch limo_bringup lidar_rviz.launch
+rviz2 
 ```
 
-成功运行之后会看到rviz可视化工具打开，其中显示的绿色数据就是雷达扫描出来的激光数据。
+成功运行之后会看到rviz可视化工具打开，添加上激光雷达的数据，其中显示的绿色数据就是雷达扫描出来的激光数据。
 
 ![](./LIMO_image/lidar.png)
 
@@ -666,7 +666,7 @@ ORBBEC®Dabai 是基于双目结构光 3D 成像技术的深度相机，主要�
 首先启动ORBBEC®Dabai摄像头，运行下面的命令：
 
 ```
-ros2 launch astra_camera dabai.launch.py
+ros2 launch orbbec_camera dabai.launch.py
 ```
 
 打开rqt_image_view：
@@ -704,7 +704,7 @@ ros2 launch limo_bringup limo_start.launch.py
 （2）启动相机，在终端中输入命令：
 
 ```
-ros2 launch astra_camera dabai.launch.py
+ros2 launch orbbec_camera dabai.launch.py
 ```
 
 （3）启动rtabmap算法的建图模式，在终端中输入命令：
@@ -730,7 +730,7 @@ ros2 launch limo_bringup limo_start.launch.py
 （2）启动相机，在终端中输入命令：
 
 ```
-ros2 launch astra_camera dabai.launch.py
+ros2 launch orbbec_camera dabai.launch.py
 ```
 
 （3）启动rtabmap算法的建图模式，在终端中输入命令：
@@ -742,13 +742,7 @@ ros2 launch limo_bringup limo_rtab_rgbd.launch.py localization:=true
 （4）启动导航算法，在终端中输入命令：
 
 ```
-ros2 launch limo_bringup limo_rtab_nav2_diff.launch.py 
-```
-
-注：如果是阿克曼运动模式，请运行：
-
-```
-roslaunch limo_bringup limo_rtab_nav2_ackermann.launch.py
+ros2 launch limo_bringup limo_rtab_nav2.launch.py 
 ```
 
 ![](./LIMO_image/humble/rtab_nav2_1.png)
@@ -768,7 +762,7 @@ roslaunch limo_bringup limo_rtab_nav2_ackermann.launch.py
 启动摄像头：
 
 ```
-ros2 launch astra_camera dabai.launch.py
+ros2 launch orbbec_camera dabai.launch.py
 ```
 
 启动文字识别功能：
@@ -796,7 +790,7 @@ python3 limo_recognition_text_read.py
 启动摄像头：
 
 ```
-ros2 launch astra_camera dabai.launch.py
+ros2 launch orbbec_camera dabai.launch.py
 ```
 
 把色块放到limo的视野范围中，启动颜色跟踪功能：
@@ -826,7 +820,7 @@ ros2 run limo_visions object_detect
 启动摄像头：
 
 ```
-ros2 launch astra_camera dabai.launch.py
+ros2 launch orbbec_camera dabai.launch.py
 ```
 
 把二维码放到limo的视野范围中，启动二维码识别功能：
@@ -861,7 +855,7 @@ ros2 run limo_visions move_to_ar
 启动摄像头：
 
 ```
-ros2 launch astra_camera dabai.launch.py
+ros2 launch orbbec_camera dabai.launch.py
 ```
 
 把红绿灯放到limo的视野范围中，启动红绿灯识别功能：
@@ -881,7 +875,7 @@ ros2 run limo_visions traffic_light
 启动摄像头：
 
 ```
-ros2 launch astra_camera dabai.launch.py
+ros2 launch orbbec_camera dabai.launch.py
 ```
 
 启动yolo识别节点
